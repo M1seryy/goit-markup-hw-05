@@ -74,9 +74,34 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
+.active-link::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  margin-top: 24px;
+  color: #404bbf;
+  border-radius: 2px;
+  animation: underline 300ms ease-in-out;
+}
+@keyframes underline {
+  0% {
+    width: 0%;
+    opacity: 0;
+  }
 
-.header-link-item > a:is(:active, :focus, :hover) {
-  transition: 300ms ease-in-out;
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.header-link-item > a:is(:active, :focus, :hover):after {
+  animation: underline 300ms ease-in-out;
+  transition-property: color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #404bbf;
 }
 .header-link-item > a:is(:active, :focus, :hover)::after {
@@ -117,6 +142,9 @@ h6 {
 }
 .details-link:hover {
   color: #404bbf;
+  transition-property: color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------------BUTTONS------------------ */
@@ -250,6 +278,9 @@ h6 {
 }
 .footer-soc-item-link:is(:hover, :focus) {
   background-color: #31d0aa;
+  transition-property: background;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ----------------WEBSTUDIO MAIN PAGE------------------ */
 /* ----------------HERO------------------ */
@@ -306,6 +337,9 @@ h6 {
 .hero-btn:hover {
   background-color: #404bbf;
   color: #ffffff;
+  transition-property: background, color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------------FEATURES------------------ */
@@ -445,6 +479,9 @@ h6 {
 
 .soc-item-link:is(:hover, :focus) {
   background-color: #404bbf;
+  transition-property: background;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer {
   background-color: var(--main-text-color);
@@ -516,4 +553,7 @@ h6 {
 .cusomer-link:is(:hover, :focus) {
   border-color: #404bbf;
   color: #404bbf;
+  transition-property: color, border-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
