@@ -201,7 +201,9 @@ h6 {
   box-sizing: border-box;
   height: 100%;
   padding: 40px 32px 0;
-  background-color: #404bbf;
+  background: #4d5ae5;
+  background-blend-mode: soft-light;
+  mix-blend-mode: normal;
   transform: translateY(100%);
   transition-property: all;
   transition-duration: 250ms;
