@@ -143,12 +143,12 @@ h6 {
   font-size: 16px;
   line-height: calc(24 / 16);
   display: flex;
-}
-.details-link:hover {
-  color: #404bbf;
   transition-property: color;
   transition-duration: var(--trans-duration);
   transition-timing-function: var(--cubic);
+}
+.details-link:hover {
+  color: #404bbf;
 }
 
 /* ----------------BUTTONS------------------ */
@@ -172,16 +172,15 @@ h6 {
   font-weight: 500;
   line-height: calc(24 / 16);
   cursor: pointer;
+  transition-property: box-shadow, background, color;
+  transition-duration: var(--trans-duration);
+  transition-timing-function: var(--cubic);
 }
 .btn-list-btn:is(:hover, :focus) {
   background: #404bbf;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
   color: #ffffff;
-  transition-property: box-shadow, background, color;
-  transition-duration: var(--trans-duration);
-  transition-timing-function: var(--cubic);
 }
 /* ----------------IMAGE-LIST------------------ */
 .images {
@@ -205,7 +204,7 @@ h6 {
   background-blend-mode: soft-light;
   mix-blend-mode: normal;
   transform: translateY(100%);
-  transition-property: all;
+  transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -226,6 +225,9 @@ h6 {
   height: 420px;
   border: 1px solid #e7e9fc;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  transition-property: transform, box-shadow;
+  transition-duration: var(--trans-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .img-item:hover .img-overlay {
@@ -236,9 +238,6 @@ h6 {
   transform: translateY(0);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition-property: transform, box-shadow;
-  transition-duration: var(--trans-duration);
-  transition-timing-function: var(--cubic);
 }
 .image {
   background: #ffffff;
@@ -313,12 +312,12 @@ h6 {
   padding: 8px;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.1);
-}
-.footer-soc-item-link:is(:hover, :focus) {
-  background-color: #31d0aa;
   transition-property: background;
   transition-duration: var(--trans-duration);
   transition-timing-function: var(--cubic);
+}
+.footer-soc-item-link:is(:hover, :focus) {
+  background-color: #31d0aa;
 }
 /* ----------------WEBSTUDIO MAIN PAGE------------------ */
 /* ----------------HERO------------------ */
@@ -426,13 +425,13 @@ h6 {
   line-height: calc(24 / 16);
   border: none;
   color: #ffffff;
+  transition-property: background, color, box-shadow;
+  transition-duration: var(--trans-duration);
+  transition-timing-function: var(--cubic);
 }
 .hero-btn:hover {
   background-color: #404bbf;
   color: #ffffff;
-  transition-property: background, color, box-shadow;
-  transition-duration: var(--trans-duration);
-  transition-timing-function: var(--cubic);
 }
 
 /* ----------------FEATURES------------------ */
@@ -568,13 +567,13 @@ h6 {
   padding: 12px;
   box-sizing: border-box;
   background-color: #4d5ae5;
+  transition-property: background;
+  transition-duration: var(--trans-duration);
+  transition-timing-function: var(--cubic);
 }
 
 .soc-item-link:is(:hover, :focus) {
   background-color: #404bbf;
-  transition-property: background;
-  transition-duration: var(--trans-duration);
-  transition-timing-function: var(--cubic);
 }
 .footer {
   background-color: var(--main-text-color);
@@ -633,7 +632,9 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transition-property: color, border-color;
+  transition-duration: var(--trans-duration);
+  transition-timing-function: var(--cubic);
   box-sizing: border-box;
   border: 1px solid #8e8f99;
   border-radius: 4px;
@@ -646,7 +647,4 @@ h6 {
 .cusomer-link:is(:hover, :focus) {
   border-color: #404bbf;
   color: #404bbf;
-  transition-property: color, border-color;
-  transition-duration: var(--trans-duration);
-  transition-timing-function: var(--cubic);
 }
